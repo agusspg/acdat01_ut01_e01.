@@ -1,6 +1,7 @@
 package es.educaand.acdat01;
 
 import es.educaand.acdat01.dao.ConfigDAO;
+import es.educaand.acdat01.dao.ConfigJsonDAO;
 import es.educaand.acdat01.dao.ConfigPropertiesDAO;
 import es.educaand.acdat01.dao.ConfigXmlDAO;
 import es.educaand.acdat01.dto.ConfigDTO;
@@ -14,6 +15,7 @@ public class Main {
 
         probar(new ConfigPropertiesDAO("config.properties"), datos);
         probar(new ConfigXmlDAO("config.xml"), datos);
+        probar(new ConfigJsonDAO("config.json"), datos);
     }
 
     private static void probar(ConfigDAO dao, ConfigDTO datos) {
